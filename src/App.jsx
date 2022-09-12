@@ -12,6 +12,8 @@ import {
 	ButtonGroup,
 	cbModal,
 	Dropdown,
+	Field,
+	FieldLabel,
 } from "@contentstack/venus-components";
 import { Slide, Bounce, Flip, Zoom, cssTransition } from "react-toastify";
 import { Pagination } from "@mui/material";
@@ -214,69 +216,88 @@ function App() {
 						deleteTodo={deleteTodo}
 					/>
 					<div className="App-pagination">
-					<Pagination
-						count={totalPages}
-						page={pageNo}
-						siblingCount={0}
-						onChange={handelPageChange}
-						sx={{ margin: " 20px auto auto auto" }}
-					/>
-					<TextInput className="limit-Input"
-						width="small"
-						type="number"
-						value={limit}
-						onChange={(e) => setlimit(e.target.value)}
-					/>
-					<Dropdown
-						closeAfterSelect="false"
-						dropDownPosition="top"
-						dropDownType="primary"
-						highlightActive={true}
-						isEllipse={true}
-						isMultiCheck={false}
-						list={[
-							{
-							default: true,
-							label: '3',
-							value: '3',
-							action:(e) => {setlimit(3)}						},
-							{
-							label: '5',
-							value: '5',
-							action:(e) => {setlimit(5)}
-							},
-							{
-							label: '7',
-							value: '7',
-							action:(e) => {setlimit(7)}
-							},
-							{
-							label: '10',
-							value: '10',
-							action:(e) => {setlimit(10)}
-							},
-							{
-							label: '25',
-							value: '25',
-							action:(e) => {setlimit(25)}
-							},
-							{
-							label: '50',
-							value: '50',
-							action:(e) => {setlimit(50)}
-							},
-							{
-							label: '100',
-							value: '100',
-							action:(e) => {setlimit(100)}
-							},
-					]}
-						onChange={(e) => setlimit(e.target.label)}
-						testId="cs-dropdown"
-						type="select"
-						viewAs="value"
+						<Pagination
+							count={totalPages}
+							page={pageNo}
+							siblingCount={0}
+							onChange={handelPageChange}
+							sx={{ margin: " 20px auto auto auto" }}
 						/>
-
+						<Field
+						style={{ width: "100px" }}
+							
+						>
+							<FieldLabel htmlFor="label" style={{  }}>Custom Limit</FieldLabel>
+							<TextInput
+								value={limit}
+								style={{ width: "10px" }}
+								onChange={(e) => setlimit(e.target.value)}
+							/>
+						</Field>
+						<Dropdown
+							closeAfterSelect="false"
+							dropDownPosition="top"
+							dropDownType="primary"
+							highlightActive={true}
+							isEllipse={true}
+							isMultiCheck={false}
+							list={[
+								{
+									default: true,
+									label: "3",
+									value: "3",
+									action: (e) => {
+										setlimit(3);
+									},
+								},
+								{
+									label: "5",
+									value: "5",
+									action: (e) => {
+										setlimit(5);
+									},
+								},
+								{
+									label: "7",
+									value: "7",
+									action: (e) => {
+										setlimit(7);
+									},
+								},
+								{
+									label: "10",
+									value: "10",
+									action: (e) => {
+										setlimit(10);
+									},
+								},
+								{
+									label: "25",
+									value: "25",
+									action: (e) => {
+										setlimit(25);
+									},
+								},
+								{
+									label: "50",
+									value: "50",
+									action: (e) => {
+										setlimit(50);
+									},
+								},
+								{
+									label: "100",
+									value: "100",
+									action: (e) => {
+										setlimit(100);
+									},
+								},
+							]}
+							onChange={(e) => setlimit(e.target.label)}
+							testId="cs-dropdown"
+							type="select"
+							viewAs="value"
+						/>
 					</div>
 				</div>
 			</div>

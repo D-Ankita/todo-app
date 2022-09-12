@@ -25,7 +25,6 @@ function Task({ todo, updateTodo, deleteTodo, updateStatus }) {
 	};
 
 	const deleteTask = () => {
-		//------------------------------------------------ALERT BOX HERE
 		 deleteModal()
 	};
 	const changeCompletionStatus = (event) => {
@@ -81,6 +80,7 @@ function Task({ todo, updateTodo, deleteTodo, updateStatus }) {
 
 
 				<TextInput
+					style={isComplete ? { "text-decoration": "line-through", } : {  }}
 					width="full"
 					name="label"
 					value={localValue}
@@ -90,7 +90,8 @@ function Task({ todo, updateTodo, deleteTodo, updateStatus }) {
 				/>
 
 
-				<ButtonGroup className="Task-button-group">
+				
+				{checked ? (<ButtonGroup className="Task-button-group">
 					{ isEditOn ? 
 					(<Button
 						style={{
@@ -119,7 +120,25 @@ function Task({ todo, updateTodo, deleteTodo, updateStatus }) {
 						Delete
 					</Button>
 
-				</ButtonGroup>
+				</ButtonGroup>) : (<ButtonGroup className="Task-button-group">
+					<Button
+						style={{
+							backgroundColor: "#41E6C9"
+
+						    }}
+						buttonType="primary"		
+						icon="Edit"
+						disabled
+					>Edit</Button>
+					
+					<Button buttonType="primary" onClick={deleteTask} style={{
+							backgroundColor: "#FA6E33"
+						    }}>
+						Delete
+					</Button>
+
+				</ButtonGroup>)}
+				
 
 			</div>
 			
