@@ -1,0 +1,22 @@
+.LoginPage {
+	height: 100vh;
+	background-image: url(../../../assets/unsplash-bg.jpg);
+	/* background-image: url("../../assets/unsplash-bg.jpg"); */
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.signup {
+	color: white;
+	padding: 10px 20px;
+	border-radius: 4px;
+}
+
+#mybutton {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}

@@ -1,13 +1,11 @@
 import { Button, ButtonGroup, Icon, ModalBody, ModalFooter, ModalHeader } from "@contentstack/venus-components";
 
-const DeleteModal = (props) => {  
+const SigninFailedModal = (props) => {  
 	// console.log("header:",props.header);
 	return (
 		<>
 			<ModalBody className="modalBodyCustomClass">
-				<h2><Icon icon="RedAlert" size="large"/> Warning!</h2><br />
-				<p> Are you sure you want to delete?
-				</p>
+				<h2><Icon icon="RedAlert" size="large"/> {props.header}</h2><br />
 			</ModalBody>
 
 			<ModalFooter>
@@ -16,11 +14,11 @@ const DeleteModal = (props) => {
 						buttonType="light"
 						onClick={() => props.closeModal("false")}
 					> 
-					Cancel
+					Try Again
 					</Button>
 					<Button buttonType="light"
 						onClick={() =>props.closeModal("true")} >
-							Confirm
+							Signup instead
 					</Button>
 				</ButtonGroup>
 			</ModalFooter>
@@ -28,4 +26,4 @@ const DeleteModal = (props) => {
 	);
 };
 
-export default DeleteModal
+export default SigninFailedModal

@@ -75,3 +75,26 @@
 	width: 90%;
 	margin: 20px auto auto 10px;
 }
+
+.avatar{
+	position: fixed;
+	margin:4px;
+	top: 10px;
+	left: 10px;
+	border: 1px solid black;
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.avatarIcon{
+	
+	position: fixed;
+	/* border-radius: 50%; */
+	/* width: 200px; */
+	height: auto;
+	padding-bottom: 10px;
+	/* margin-left:20px; */
+}

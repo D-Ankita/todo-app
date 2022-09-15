@@ -13,13 +13,13 @@ function Task({ todo, updateTodo, deleteTodo, updateStatus }) {
 	const [checked, setChecked] = useState(!isComplete);
 
 	const EditTask = () => {
-		console.log("isEditOn",isEditOn);
+		// console.log("isEditOn",isEditOn);
 		setisEditOn(!isEditOn);
 
 	};
 
 	const saveTask = () => {
-		console.log("isEditOn",isEditOn);
+		// console.log("isEditOn",isEditOn);
 		setisEditOn(!isEditOn);
 		updateTodo(id, localValue);
 	};
@@ -45,7 +45,7 @@ function Task({ todo, updateTodo, deleteTodo, updateStatus }) {
 			}
 		    },
 		    onOpen: () => {
-			console.log('onOpen gets called')
+			// console.log('onOpen gets called')
 		    },
 		     size: 'tiny',
 		  },
@@ -80,7 +80,7 @@ function Task({ todo, updateTodo, deleteTodo, updateStatus }) {
 
 
 				<TextInput
-					style={isComplete ? { "text-decoration": "line-through", } : {  }}
+					style={isComplete ? { "textDecoration": "line-through", } : {  }}
 					width="full"
 					name="label"
 					value={localValue}
