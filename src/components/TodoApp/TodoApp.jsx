@@ -272,7 +272,7 @@ function TodoApp() {
 							</FieldLabel>
 							<TextInput
 								value={limit}
-								style={{ width: "10px" }}
+								style={{ width: "20px" }}
 								onChange={(e) => setlimit(e.target.value)}
 							/>
 						</Field>

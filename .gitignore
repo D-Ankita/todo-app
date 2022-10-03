@@ -5,8 +5,9 @@
 /.pnp
 .pnp.js
 App.js
-featuresToAdd.txt
+/featuresToAdd.txt
 Task1.js
+/gitCommands.txt
 
 # testing
 /coverage
